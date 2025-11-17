@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SK-CDN — Assets & Fonts</title>
+
+  <!-- Tailwind 3 CDN (fonctionne en 2025, compatible, version standalone) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Config Tailwind (couleur vive personnalisée, ici cyan) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: "#00e6ff"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-neutral-950 text-neutral-200 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="border-b border-neutral-800 py-6">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-accent tracking-wide">SK-CDN</h1>
+      <nav class="space-x-6 text-neutral-400">
+        <a href="#fonts" class="hover:text-accent transition">Polices</a>
+        <a href="#assets" class="hover:text-accent transition">Assets</a>
+        <a href="https://github.com/tonpseudo/sk-cdn" class="hover:text-accent transition">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1">
+    <section class="text-center py-24">
+      <h2 class="text-4xl font-bold mb-4 text-accent">CDN Personnel pour OBS & Web</h2>
+      <p class="text-neutral-400 max-w-xl mx-auto">
+        Hébergement statique pour polices, images, overlays et autres assets utilisés pour ton stream,
+        tes projets web ou tes scènes OBS.
+      </p>
+    </section>
+
+    <!-- Exemple d'utilisation d'un asset -->
+    <section id="assets" class="max-w-5xl mx-auto px-6 py-16">
+      <h3 class="text-2xl font-semibold mb-6 border-l-4 border-accent pl-4">Exemple : utiliser un asset</h3>
+
+      <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl shadow-xl">
+        <p class="mb-4 text-neutral-300">Image stockée dans :</p>
+        <pre class="bg-neutral-800 p-4 rounded text-sm mb-4 overflow-auto">
+https://tonpseudo.github.io/sk-cdn/images/sample.png
+        </pre>
+
+        <p class="mb-4 text-neutral-300">Exemple d'utilisation dans du HTML :</p>
+        <pre class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+&lt;img src="https://tonpseudo.github.io/sk-cdn/images/sample.png" alt="Exemple" /&gt;
+        </pre>
+
+        <div class="mt-6">
+          <p class="text-neutral-300 text-sm mb-2">Aperçu :</p>
+          <img src="https://tonpseudo.github.io/sk-cdn/images/sample.png" alt="Exemple d’asset"
+               class="w-32 h-32 object-contain border border-neutral-700 rounded p-2 bg-neutral-800">
+        </div>
+      </div>
+    </section>
+
+    <!-- Exemple de font -->
+    <section id="fonts" class="max-w-5xl mx-auto px-6 pb-24">
+      <h3 class="text-2xl font-semibold mb-6 border-l-4 border-accent pl-4">Utilisation d’une police</h3>
+
+      <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl shadow-xl mb-6">
+        <p class="mb-4 text-neutral-300">Police stockée dans :</p>
+        <pre class="bg-neutral-800 p-4 rounded text-sm mb-4 overflow-auto">
+https://tonpseudo.github.io/sk-cdn/fonts/hells-cemetery.ttf
+        </pre>
+
+        <p class="mb-4 text-neutral-300">CSS pour l’importer :</p>
+        <pre class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+@font-face {
+  font-family: "HellsCemetery";
+  src: url("https://tonpseudo.github.io/sk-cdn/fonts/hells-cemetery.ttf") format("truetype");
+}
+        </pre>
+
+        <p class="mb-4 text-neutral-300">Exemple HTML :</p>
+        <pre class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+&lt;p style="font-family: 'HellsCemetery'; font-size:32px;"&gt;
+  Exemple de texte avec la police Hell's Cemetery
+&lt;/p&gt;
+        </pre>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-neutral-800 py-6 text-center text-neutral-500 text-sm">
+    © 2025 — SK-CDN. Hébergement statique via GitHub Pages.
+  </footer>
+
+</body>
+</html>
