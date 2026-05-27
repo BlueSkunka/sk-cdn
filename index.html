@@ -69,6 +69,65 @@ https://tonpseudo.github.io/sk-cdn/images/sample.png
       </div>
     </section>
 
+    <section id="audio" class="max-w-5xl mx-auto px-6 pb-24">
+      <h3 class="text-2xl font-semibold mb-6 border-l-4 border-accent pl-4">
+        Utilisation d’un son MP3
+      </h3>
+
+      <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-xl shadow-xl mb-6">
+
+        <p class="mb-4 text-neutral-300">
+          Son stocké dans :
+        </p>
+
+        <pre class="bg-neutral-800 p-4 rounded text-sm mb-4 overflow-auto">
+    https://tonpseudo.github.io/sk-cdn/sounds/death.mp3
+        </pre>
+
+        <p class="mb-4 text-neutral-300">
+          Exemple JavaScript pour StreamElements / OBS :
+        </p>
+
+        <pre class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+    const audio = new Audio(
+      "https://tonpseudo.github.io/sk-cdn/sounds/death.mp3"
+    );
+
+    audio.volume = 0.7;
+
+    audio.play();
+        </pre>
+
+        <p class="mb-4 mt-6 text-neutral-300">
+          Exemple HTML :
+        </p>
+
+        <pre class="bg-neutral-800 p-4 rounded text-sm overflow-auto">
+    &lt;audio controls&gt;
+      &lt;source
+        src="https://tonpseudo.github.io/sk-cdn/sounds/death.mp3"
+        type="audio/mpeg"
+      /&gt;
+    &lt;/audio&gt;
+        </pre>
+
+        <div class="mt-6">
+          <p class="text-neutral-300 text-sm mb-2">
+            Aperçu :
+          </p>
+
+          <audio controls class="w-full">
+            <source
+              src="https://tonpseudo.github.io/sk-cdn/sounds/death.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </div>
+
+      </div>
+    </section>
+
+
     <!-- Exemple de font -->
     <section id="fonts" class="max-w-5xl mx-auto px-6 pb-24">
       <h3 class="text-2xl font-semibold mb-6 border-l-4 border-accent pl-4">Utilisation d’une police</h3>
